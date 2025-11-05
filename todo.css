@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type:none;
+ color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+   background-color:  brown;
+   align-items: center;
+}
+.todo-image{
+    width: 2.5rem;
+    z-index: 0;
+}
+.todo-logo{
+    display: flex;
+}
+.abouts{
+    width: 50%;
+}
+
+.abouts ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+}
+ul li::before{
+  content:'';
+  height: 3px;
+  width:0;
+  border-radius: 100px;
+  background:linear-gradient(to right,gold, yellow );
+  transition: 400ms ease-in-out;
+  bottom: 0;
+  position: absolute;
+
+}
+ul li:hover::before{ 
+    width: 100%;
+}
+ul li:hover{
+     transform: translateY(-4px);
+}
+ul li a:active{
+    color: darkgoldenrod;
+}
