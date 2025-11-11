@@ -11,22 +11,27 @@
   <!-- The header starts here -->
 <header class="header">
   <div class="todo-logo">
-    <img class="todo-image" src="Todo app image.png">
     <h1 class="name">ToDo-List</h1>
+    <h1 id="toggle">&#9776</h1>
   </div>
-  <div class="abouts">
-   <ul>
+   <ul id="ul">
     <li><a href="#">Home</a></li>
     <li><a href="#">Achievements</a></li>
     <li><a href="#">Login</a></li>
    </ul>
-    
-  </div>
+
+ 
 </header>
 <!-- The header ends here -->
 
 
 
-
+<script>
+  let hamburger = document.querySelector("#toggle");
+  let abouts = document.querySelector("#ul");
+    hamburger.addEventListener('click',()=>{
+      abouts.classList.toggle('active');
+    });
+</script>
 </body>
 </html>

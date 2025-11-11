@@ -9,7 +9,6 @@
 }
 header{
     display: flex;
-    justify-content: space-between;
    background-color:  brown;
    align-items: center;
 }
@@ -17,35 +16,66 @@ header{
     width: 2.5rem;
     z-index: 0;
 }
+
 .todo-logo{
-    display: flex;
+    display: flex; 
+    justify-content: space-between; 
 }
-.abouts{
-    width: 50%;
+h1{
+    font-size: 2em;
 }
 
-.abouts ul{
-    display: flex;
+   #toggle{
+    display: none;
+ }
+
+ ul{
+    width: 70%;
+     display: flex;
     justify-content: space-around;
     font-size: 1.3rem;
 }
+
 ul li::before{
   content:'';
   height: 3px;
-  width:0;
+   width: 0;
   border-radius: 100px;
   background:linear-gradient(to right,gold, yellow );
   transition: 400ms ease-in-out;
   bottom: 0;
   position: absolute;
-
 }
 ul li:hover::before{ 
-    width: 100%;
+   width: 100%;
 }
 ul li:hover{
      transform: translateY(-4px);
 }
 ul li a:active{
     color: darkgoldenrod;
+}
+@media screen and (max-width:420px){
+    *{
+        font-size: 12px;
+      }
+      header{
+        display: block;
+        height: auto;
+      }
+
+   #ul{
+    height: 13vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+     width: fit-content;
+   }
+   #toggle{
+    display: block;
+    cursor: pointer;
+   }
+   #ul.active{
+   display: flex;
+   }
 }
